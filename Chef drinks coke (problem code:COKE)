@@ -1,0 +1,23 @@
+#Try submitting the code directly if you get NZEC error.
+# cook your dish here
+pr=''
+t=int(input())
+for _ in range(t):
+    Dict={} ; store=''
+    n,m,k,l,r=map(int,input().split())
+    for _ in range(n):
+        c,p=map(int,input().split())
+        temp=c
+        Dict[c]=p
+        for _ in range(m):
+            if temp<k:
+                temp+=1
+            elif temp>k:
+                temp-=1
+        if temp>=l and temp<=r:
+            store=store+str(Dict[c])+' '
+    if store=='':
+        store='-1'
+    l=list(map(int,store.split()))
+    pr=pr+str(min(l))+'\n'
+print(pr)
