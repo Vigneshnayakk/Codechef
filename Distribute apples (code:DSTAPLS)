@@ -1,0 +1,12 @@
+# cook your dish here
+store=''
+t=int(input())
+for _ in range(t):
+    n,k=map(int,input().split())
+    if k==1:
+        store=store+'NO'+'\n'
+    elif n%(k*k)==0:
+        store=store+'NO'+'\n'
+    else:
+        store=store+'YES'+'\n'
+print(store)
